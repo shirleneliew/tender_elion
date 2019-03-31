@@ -1,0 +1,132 @@
+{% extends './../base.html' %}
+
+{% block content %}
+  <div class='symptom'>
+    <div class='text-center'>
+      <h2>
+        Log my symptoms
+      </h2>
+      Today is {% now "jS F Y" %}.
+    </div>
+
+
+    <div class='question'>
+      <div class="text-center">
+        <h4>
+          How much pain are you experiencing?
+        </h4>
+      </div>
+      <div class='d-flex justify-content-around'>
+        {% for i in i|rjust:5 %}
+        <div class='d-flex flex-column align-items-center'>
+          <div>
+            <label for="pain_{{ forloop.counter }}">
+              {% if forloop.counter == 1 %}
+              🙂
+              {% endif %}
+              {% if forloop.counter == 2 %}
+              😞
+              {% endif %}
+              {% if forloop.counter == 3 %}
+              😖
+              {% endif %}
+              {% if forloop.counter == 4 %}
+              😭
+              {% endif %}
+              {% if forloop.counter == 5 %}
+              😵
+              {% endif %}
+            </label>
+          </div>
+          <div>
+            <div>
+              <input type="radio" name="pain" id="pain_{{ forloop.counter }}" value="{{ forloop.counter }}" checked>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class='question'>
+      <div class="text-center">
+        <h4>
+          How bloated are you?
+        </h4>
+      </div>
+      <div class='d-flex justify-content-around'>
+        {% for i in i|rjust:5 %}
+        <div class='d-flex flex-column align-items-center'>
+          <div>
+            <label for="bloat_{{ forloop.counter }}">
+              {% if forloop.counter == 1 %}
+              🙂
+              {% endif %}
+              {% if forloop.counter == 2 %}
+              😞
+              {% endif %}
+              {% if forloop.counter == 3 %}
+              😖
+              {% endif %}
+              {% if forloop.counter == 4 %}
+              😭
+              {% endif %}
+              {% if forloop.counter == 5 %}
+              😵
+              {% endif %}
+            </label>          
+          </div>
+          <div>
+            <div>
+              <input type="radio" name="bloat" id="bloat_{{ forloop.counter }}" value="{{ forloop.counter }}" checked>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class='question'>
+      <div class="text-center">
+        <h4>
+          How dizzy are you?
+        </h4>
+      </div>
+      <div class='d-flex justify-content-around'>
+        {% for i in i|rjust:5 %}
+        <div class='d-flex flex-column align-items-center'>
+          <div>
+            <label for="dizzy_{{ forloop.counter }}">
+              {% if forloop.counter == 1 %}
+              🙂
+              {% endif %}
+              {% if forloop.counter == 2 %}
+              😞
+              {% endif %}
+              {% if forloop.counter == 3 %}
+              😖
+              {% endif %}
+              {% if forloop.counter == 4 %}
+              😭
+              {% endif %}
+              {% if forloop.counter == 5 %}
+              😵
+              {% endif %}
+            </label>                    
+          </div>
+          <div>
+            <div>
+              <input type="radio" name="dizzy" id="dizzy_{{ forloop.counter }}" value="{{ forloop.counter }}" checked>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <a href="{% url 'userflow:symptom_result' %}" type="submit" class="btn btn-lg btn-outline btn-outline-light btn-block">
+      Log this episode
+    </a>
+    
+  </div>
+{% endblock %}

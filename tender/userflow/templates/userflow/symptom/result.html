@@ -1,0 +1,28 @@
+{% extends './../base.html' %}
+
+{% block content %}
+<div class="symptom">
+  <div class="text-center">
+    
+    <h1>
+      Thank you for logging
+    </h1>
+
+  
+  </div>
+    <div class='bg-light text-dark text-center rounded p-3 mb-4'>
+      <h4>Thank you for contributing!</h4>
+      <h4>More ❤️ to you for <span class="accent">
+        empowering women worldwide.
+      </span></h4>
+      <p class='m-0 small'>
+        <a href="#" class="text-decoration-none text-muted" >Find Out How We Empower Women.</p>
+      </div>
+      </p>
+
+    <a href="{% url 'userflow:report' %}" type="submit" class="btn  btn-lg btn-outline btn-outline-light btn-block">
+      Get Report
+    </a>
+
+</div>
+{% endblock %}
