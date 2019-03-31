@@ -9,7 +9,7 @@ def experience(request):
     print(request.GET)
 
     mock = {
-      'x_other_women': 1234,
+      'x_other_women': 514,
       'total_women': 5000,
       'days': [
         {'day': 1, 'pain': 3 },
