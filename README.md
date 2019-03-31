@@ -4,6 +4,8 @@ Team 14
 # psloveyoutoo
 Empowering women to take charge of their reproductive health.
 
+See our presentation [here](https://docs.google.com/presentation/d/1d_gJzHZWGnPXRoLjxYsFEVm_Z2fMSVxz09TjiEebByw/edit?usp=sharing).
+
 ## \#WomensHealth
 Stigma surrounding menstrual health hinders women from talking about their menstrual health openly and this has a negative impact on women seeking the necessary help to manage their menstrual health. A survey done by Public Health England revealed that 35% of women have experienced heavy menstrual bleeding, which previous evidence shows is associated with higher unemployment and absence from work.Survey also shows that less than half of women seeking help for their symptoms, regardless of severity.
 
