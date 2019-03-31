@@ -16,13 +16,17 @@ In the current consumer digital app space, there are various other menstrual cyc
 #ManageYourHealth
 In addition, the data input categories are designed to guide women to record accurate health information which will be of value to clinicians should the user decide to consult a doctor. 
 
-# How to use app
+# How to view code
 
 ### App
+To experience the app, go to:
+[periodlover](https://www.google.com)
+The app is not yet connected to the model.
 
 ### Model and data cleaning
-Model libraries are in the model folder. Training script can be opened from training_model_random_forest.py.
+Model libraries are in the 'model' folder. Training script can be opened from training_model_random_forest.py.
 
 The jupyter notebooks to clean the code and create the model can be found in the 'data_cleaning' folder.
+Run 'model_final.ipynb' to see explanation of our data cleaning and model.
 To run the notebooks, please put the original pslove csv files in the 'data_cleaning' folder.
 
