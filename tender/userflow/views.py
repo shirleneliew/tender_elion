@@ -7,12 +7,11 @@ def onboarding(request):
 def experience(request):
     return render(request, 'userflow/experience.html')
 
-
 def symptom_new(request):
-    return None
+    return render(request, 'userflow/symptom/new.html')
 
 def symptom_result(request):
-    return None
+    return render(request, 'userflow/symptom/result.html')
 
 def report(request):
-    return None
+    return render(request, 'userflow/report.html')

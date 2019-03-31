@@ -1,5 +1,7 @@
 {% extends "./base.html" %}
 
 {% block content %}
-
+  <a href="{% url 'userflow:symptom_new' %}" type="submit" class="btn  btn-lg btn-primary btn-block">
+    Log new symptom
+  </a>
 {% endblock %}

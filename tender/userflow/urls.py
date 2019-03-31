@@ -6,7 +6,7 @@ app_name = 'userflow'
 urlpatterns = [
     path('onboarding', views.onboarding, name='onboarding'),
     path('experience', views.experience, name='experience'),
-    path('symptom/new', views.symptom_new),
-    path('symptom/result', views.symptom_result),
-    path('report', views.report),
+    path('symptom/new', views.symptom_new, name='symptom_new'),
+    path('symptom/result', views.symptom_result, name='symptom_result'),
+    path('report', views.report, name='report'),
 ]
