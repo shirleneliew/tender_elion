@@ -2,11 +2,11 @@
 
 {% block content %}
 <div class='onboarding'>
-  <form>
+  <form method='get' action="{% url 'userflow:experience'  %}">
     <div class="form-group">
       <label for="period_length">How long does your period typically last?</label>
       <div class="input-group ">
-        <input type="text" class="form-control">
+        <input type="number" name="period_length" class="form-control">
         <div class="input-group-append">
           <span class="input-group-text">Days</span>
         </div>
@@ -16,7 +16,7 @@
     <div class="form-group">
       <label for="cycle_length">What is the typical number of days between your periods?</label>
       <div class="input-group ">
-        <input type="text" class="form-control">
+        <input type="number" name="cycle_length" class="form-control">
         <div class="input-group-append">
           <span class="input-group-text">Days</span>
         </div>
@@ -27,14 +27,14 @@
       <label for="cycle_length">When did your last period occured?</label>
       <div class="form-row">
         <div class='col-6'>
-          <select class="form-control">
+          <select name="last_period_day" class="form-control">
             {% for i in i|rjust:31 %}
               <option>{{ forloop.counter }}</option>
             {% endfor %}
           </select>
         </div>        
         <div class='col-6'>
-          <select class="form-control">
+          <select name="last_period_month" class="form-control">
             <option>April</option>
             <option>May</option>
           </select>
@@ -43,8 +43,8 @@
       </div>
     </div>
 
-    <a href="{% url 'userflow:experience' %}" type="submit" class="btn btn-lg btn-outline btn-outline-light btn-block">
-    Show Me Magic</a>
+    <button type="submit" class="btn btn-lg btn-outline btn-outline-light btn-block">
+    Show Me Magic</button>
   </form>
 </div>
 {% endblock %}
