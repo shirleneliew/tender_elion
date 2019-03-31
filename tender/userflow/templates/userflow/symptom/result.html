@@ -8,48 +8,36 @@
   </h3>
 
   <!-- Symptom -->
+  {% for type in results %}
   <div class='p-3 rounded bg-light text-dark mb-4'>
-    <h3 class='text-center'>Cramps</h3>
+    <h3 class='text-center'>{{ type.name }}</h3>
     <div class='d-flex justify-content-around align-items-center'>
       <div class='text-center'>
         <h4>You</h4>
         <span style='font-size: 2em'>
-        {% include '../emoji.html' with value=2  %}
+        {% include '../emoji.html' with value=type.own  %}
         </span>
       </div>
       <div class='text-center'>
         <h4>Similar to you</h4>
         <span style='font-size: 2em'>
-        {% include '../emoji.html' with value=4  %}
+        {% include '../emoji.html' with value=type.others  %}
         </span>        
       </div>
     </div>
-    <p class="small text-center m-0">You are doing better compared to your peers.</p>
+    {% if type.own > type.others %}
+      <p class="small text-center m-0">You are doing worse compared to your peers.</p>
+    {% elif type.own < type.others %}
+      <p class="small text-center m-0">You are doing better compared to your peers.</p>
+    {% else %}
+    {% endif %}
   </div>
-
-  <!-- Symptom -->
-  <div class='p-3 rounded bg-light text-dark mb-4'>
-    <h3 class='text-center'>Bloat</h3>
-    <div class='d-flex justify-content-around align-items-center'>
-      <div class='text-center'>
-        <h4>You</h4>
-        <span style='font-size: 2em'>
-        {% include '../emoji.html' with value=3  %}
-        </span>
-      </div>
-      <div class='text-center'>
-        <h4>Similar to you</h4>
-        <span style='font-size: 2em'>
-        {% include '../emoji.html' with value=1  %}
-        </span>        
-      </div>
-    </div>
-    <p class="small text-center m-0">You are doing worse compared to your peers.</p>
-  </div>
+  {% endfor %}
   <p class='small text-center'>
-    * Disclaimer: Results above has not been medically endorsed. When in doubt, please approach a medical professional.
+  * Disclaimer: Results are not indicative of medical conditions. When in doubt, please approach a professional.
   </p>
 
+  <hr>
   </div>
     <div class='bg-light text-dark text-center rounded p-3 mb-4'>
       <h4>Thank you for contributing!</h4>

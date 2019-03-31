@@ -51,7 +51,21 @@ def symptom_new(request):
     return render(request, 'userflow/symptom/new.html')
 
 def symptom_result(request):
-    return render(request, 'userflow/symptom/result.html')
+    data = {
+        'results': [
+            {
+                'name': 'Cramp',
+                'own': 2,
+                'others': 4
+            },
+            {
+                'name': 'Bloat',
+                'own': 5,
+                'others': 2
+            }
+        ]
+    }
+    return render(request, 'userflow/symptom/result.html', context=data)
 
 def report(request):
     return render(request, 'userflow/report.html')
