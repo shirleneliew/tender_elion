@@ -20,7 +20,8 @@ In addition, the data input categories are designed to guide women to record acc
 
 ### App
 To experience the app, go to:
-[periodlover](https://www.google.com)
+[periodlover=](https://periodlove.herokuapp.com/onboarding).
+
 The app is not yet connected to the model.
 
 ### Model and data cleaning
