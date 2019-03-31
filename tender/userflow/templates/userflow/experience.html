@@ -2,23 +2,72 @@
 
 {% block content %}
 
-
-  <h3>
-    This is what other women like you are experiencing:
-  </h3>
-  <!-- This is supposed to show the intensities that other people are experiencing. -->
-  <!-- Need the shape of data -->
-  <div>
-    <img class='img-fluid' src="https://via.placeholder.com/450">
+<div class='experience'>
+<h3>
+  Here is how <span class='accent'>{{ x_other_women }}</span> women similar to you experience their period:
+</h3>
+<!-- This is supposed to show the intensities that other people are experiencing. -->
+<!-- Need the shape of data -->
+<!-- <div class="timeline">
+  <div class='d-flex flex-column'>
+    {% for d in days %}
+    <div class='d-flex t-row justify-content-between align-items-center'>
+      <div>
+        {{ d.day }}  
+      </div>
+      <div>
+        {{ d.pain }}
+      </div>
+      <div>
+        {{ d.sore }}
+      </div>
+      
+    </div>
+    {% endfor %}
   </div>
+</div>
+ -->
 
-  <p class='small'>
-    * Disclaimer Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua.
-  </p>
+<div class="mt-4 p-2 timeline rounded">
+  <table class="text-center table table-sm responsive">
+    <thead>
+      <td>Day</td>
+      <td>Cramps</td>
+      <td>Sore</td>
+    </thead>
+    <tbody>
+    {% for d in days %}
+      {% if d.day == 27 %} 
+      <tr class='marked'>
+      {% else %}
+      <tr>
+      {% endif %}
+        <td style='font-size: 2em;'>
+          {{ d.day }}  
+        </td>
+        <td style='font-size: 2em;'>
+          {% include './emoji.html' with value=d.pain  %}
+        </td>
+        <td style='font-size: 2em;'>
+          {% include './emoji.html' with value=d.sore  %}
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
 
+<p class='small mt-3'>
+  * Disclaimer: Results above has not been medically endorsed. When in doubt, please approach a medical professional.
+</p>
+
+<div class='my-5'>
+  <h2>Want a more accurate assessment? Record your symptoms and let our smart AI tell you more. </h2>
   <a href="{% url 'userflow:symptom_new' %}" type="submit" class="btn  btn-lg btn-outline btn-outline-light btn-block">
-    Log new symptom
+    Record a Symptom
   </a>
+</div>
+  
+</div>
 
 {% endblock %}

@@ -4,9 +4,11 @@
   <div class='symptom'>
     <div class='text-center'>
       <h2>
-        Log my symptoms
+        Record New Symptom
       </h2>
-      Today is {% now "jS F Y" %}.
+      <h4>
+        Today is {% now "jS F Y" %}.
+      </h4>
     </div>
 
 
@@ -21,26 +23,12 @@
         <div class='d-flex flex-column align-items-center'>
           <div>
             <label for="pain_{{ forloop.counter }}">
-              {% if forloop.counter == 1 %}
-              🙂
-              {% endif %}
-              {% if forloop.counter == 2 %}
-              😞
-              {% endif %}
-              {% if forloop.counter == 3 %}
-              😖
-              {% endif %}
-              {% if forloop.counter == 4 %}
-              😭
-              {% endif %}
-              {% if forloop.counter == 5 %}
-              😵
-              {% endif %}
+              {% include '../emoji.html' with value=forloop.counter  %}
             </label>
           </div>
           <div>
             <div>
-              <input type="radio" name="pain" id="pain_{{ forloop.counter }}" value="{{ forloop.counter }}" checked>
+              <input type="radio" name="pain" id="pain_{{ forloop.counter }}" value="{{ forloop.counter }}">
             </div>
           </div>
         </div>
@@ -58,26 +46,12 @@
         <div class='d-flex flex-column align-items-center'>
           <div>
             <label for="bloat_{{ forloop.counter }}">
-              {% if forloop.counter == 1 %}
-              🙂
-              {% endif %}
-              {% if forloop.counter == 2 %}
-              😞
-              {% endif %}
-              {% if forloop.counter == 3 %}
-              😖
-              {% endif %}
-              {% if forloop.counter == 4 %}
-              😭
-              {% endif %}
-              {% if forloop.counter == 5 %}
-              😵
-              {% endif %}
+              {% include '../emoji.html' with value=forloop.counter  %}
             </label>          
           </div>
           <div>
             <div>
-              <input type="radio" name="bloat" id="bloat_{{ forloop.counter }}" value="{{ forloop.counter }}" checked>
+              <input type="radio" name="bloat" id="bloat_{{ forloop.counter }}" value="{{ forloop.counter }}">
             </div>
           </div>
         </div>
@@ -95,26 +69,12 @@
         <div class='d-flex flex-column align-items-center'>
           <div>
             <label for="dizzy_{{ forloop.counter }}">
-              {% if forloop.counter == 1 %}
-              🙂
-              {% endif %}
-              {% if forloop.counter == 2 %}
-              😞
-              {% endif %}
-              {% if forloop.counter == 3 %}
-              😖
-              {% endif %}
-              {% if forloop.counter == 4 %}
-              😭
-              {% endif %}
-              {% if forloop.counter == 5 %}
-              😵
-              {% endif %}
+              {% include '../emoji.html' with value=forloop.counter  %}
             </label>                    
           </div>
           <div>
             <div>
-              <input type="radio" name="dizzy" id="dizzy_{{ forloop.counter }}" value="{{ forloop.counter }}" checked>
+              <input type="radio" name="dizzy" id="dizzy_{{ forloop.counter }}" value="{{ forloop.counter }}">
             </div>
           </div>
         </div>
@@ -125,7 +85,7 @@
 
   <div>
     <a href="{% url 'userflow:symptom_result' %}" type="submit" class="btn btn-lg btn-outline btn-outline-light btn-block">
-      Log this episode
+      Save
     </a>
     
   </div>
