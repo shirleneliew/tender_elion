@@ -5,7 +5,6 @@ from datetime import timedelta
 
 df = pd.read_pickle('userflow/processed_symptoms.pkl')
 
-
 def get_distribution(cl, pl):
     similar_people = df[
         (df.cycle_length_initial >= timedelta(days=cl - 1)) &
@@ -16,16 +15,9 @@ def get_distribution(cl, pl):
     return similar_people
 
 
-def test(request):
-    # return df[df.cycle]
-    ss = get_distribution(26, 4)
-    return HttpResponse(ss.shape[0])
-
-
 # Create your views here.
 def onboarding(request):
     return render(request, 'userflow/onboarding.html')
-
 
 def experience(request):
     # process the get
