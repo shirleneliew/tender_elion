@@ -1,5 +1,96 @@
 {% extends './base.html' %}
 
 {% block content %}
+<div>
+
+<h3>
+  Period Log Report
+</h3>
+  <p>
+    Sorted Latest first
+  </p>
+<div class='bg-light text-dark rounded p-3 mb-4'>
+  <h3>Period Start: 13 Mar 2019</h3>
+  <div class='d-flex justify-content-between'>
+    <div>
+      <label>Period Length</label>
+      <h4>4</h4>
+    </div>
+    <div>
+      <label>Cycle Length</label>
+      <h4>29</h4>
+    </div>
+    <div>
+      <label>Regularity</label>
+      <p>Regular</p>
+    </div>
+  </div>
+  <h4>Logs</h4>
+  <table class='table table-sm'>
+    <thead>
+      <td>Date Logged</td>
+      <td>Cramp</td>
+      <td>Bloat</td>
+      <td>Dizzy</td>
+    </thead>
+    <tbody>
+      <tr>
+        <td>13 Mar 2019</td>
+        <td>1</td>
+        <td>4</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>18 Mar 2019</td>
+        <td>2</td>
+        <td>0</td>
+        <td>3</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class='bg-light text-dark rounded p-3'>
+  <h3>Period Start: 13 Feb 2019</h3>
+  <div class='d-flex justify-content-between'>
+    <div>
+      <label>Period Length</label>
+      <h4>3</h4>
+    </div>
+    <div>
+      <label>Cycle Length</label>
+      <h4>28</h4>
+    </div>
+    <div>
+      <label>Regularity</label>
+      <p>Regular</p>
+    </div>
+  </div>
+  <h4>Logs</h4>
+  <table class='table table-sm'>
+    <thead>
+      <td>Date Logged</td>
+      <td>Cramp</td>
+      <td>Bloat</td>
+      <td>Dizzy</td>
+    </thead>
+    <tbody>
+      <tr>
+        <td>14 Feb 2019</td>
+        <td>3</td>
+        <td>1</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>20 Feb 2019</td>
+        <td>3</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
 
 {% endblock %}
