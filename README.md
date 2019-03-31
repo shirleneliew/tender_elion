@@ -19,8 +19,13 @@ In addition, the data input categories are designed to guide women to record acc
 # How to view code
 
 ### App
+To run the app locally
+1. clone the repo, install the requirements from requirements.txt
+2. change dir to /tender to  
+3. run 'python manage.py runserver'
+
 To experience the app, go to:
-[periodlover=](https://periodlove.herokuapp.com/onboarding).
+[periodlove](https://periodlove.herokuapp.com/onboarding).
 
 The app is not yet connected to the model.
 
