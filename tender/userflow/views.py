@@ -4,10 +4,8 @@ from django.shortcuts import render
 def onboarding(request):
     return render(request, 'userflow/onboarding.html')
 
-
-
 def experience(request):
-    return None
+    return render(request, 'userflow/experience.html')
 
 
 def symptom_new(request):
