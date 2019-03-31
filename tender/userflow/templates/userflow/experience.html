@@ -1,7 +1,24 @@
 {% extends "./base.html" %}
 
 {% block content %}
-  <a href="{% url 'userflow:symptom_new' %}" type="submit" class="btn  btn-lg btn-primary btn-block">
+
+
+  <h3>
+    This is what other women like you are experiencing:
+  </h3>
+  <!-- This is supposed to show the intensities that other people are experiencing. -->
+  <!-- Need the shape of data -->
+  <div>
+    
+  </div>
+
+  <p class='small'>
+    * Disclaimer Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+
+  <a href="{% url 'userflow:symptom_new' %}" type="submit" class="btn  btn-lg btn-outline btn-outline-light btn-block">
     Log new symptom
   </a>
+
 {% endblock %}
