@@ -15,7 +15,7 @@ Stigma surrounding menstrual health hinders women from talking about their menst
 ## \#NotJustAnotherPeriodTracker
 In the current consumer digital app space, there are various other menstrual cycle tracking apps - most are ‘input based’ which is used by individual to track their period and predict fertile period. What differentiates <b>psloveyoutoo</b> from these other apps is that in the <b>psloveyoutoo</b> app, inputs from user will be coupled with outputs by the app. Using dataset obtained from the <b>psloveyoutoo</b> database, we can match individuals to a subset of users and the individual is able to see what other “women like me” also experiences during their menstrual cycle.
 
-#ManageYourHealth
+## \#ManageYourHealth
 In addition, the data input categories are designed to guide women to record accurate health information which will be of value to clinicians should the user decide to consult a doctor. 
 
 # How to view code
