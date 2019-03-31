@@ -2,13 +2,54 @@
 
 {% block content %}
 <div class="symptom">
-  <div class="text-center">
-    
-    <h1>
-      Thank you for logging
-    </h1>
+  <div class="">  
+  <h3 class='text-center'>
+    Based on your symptoms and profile:
+  </h3>
 
-  
+  <!-- Symptom -->
+  <div class='p-3 rounded bg-light text-dark mb-4'>
+    <h3 class='text-center'>Cramps</h3>
+    <div class='d-flex justify-content-around align-items-center'>
+      <div class='text-center'>
+        <h4>You</h4>
+        <span style='font-size: 2em'>
+        {% include '../emoji.html' with value=2  %}
+        </span>
+      </div>
+      <div class='text-center'>
+        <h4>Similar to you</h4>
+        <span style='font-size: 2em'>
+        {% include '../emoji.html' with value=4  %}
+        </span>        
+      </div>
+    </div>
+    <p class="small text-center m-0">You are doing better compared to your peers.</p>
+  </div>
+
+  <!-- Symptom -->
+  <div class='p-3 rounded bg-light text-dark mb-4'>
+    <h3 class='text-center'>Bloat</h3>
+    <div class='d-flex justify-content-around align-items-center'>
+      <div class='text-center'>
+        <h4>You</h4>
+        <span style='font-size: 2em'>
+        {% include '../emoji.html' with value=3  %}
+        </span>
+      </div>
+      <div class='text-center'>
+        <h4>Similar to you</h4>
+        <span style='font-size: 2em'>
+        {% include '../emoji.html' with value=1  %}
+        </span>        
+      </div>
+    </div>
+    <p class="small text-center m-0">You are doing worse compared to your peers.</p>
+  </div>
+  <p class='small text-center'>
+    * Disclaimer: Results above has not been medically endorsed. When in doubt, please approach a medical professional.
+  </p>
+
   </div>
     <div class='bg-light text-dark text-center rounded p-3 mb-4'>
       <h4>Thank you for contributing!</h4>
@@ -16,12 +57,16 @@
         empowering women worldwide.
       </span></h4>
       <p class='m-0 small'>
-        <a href="#" class="text-decoration-none text-muted" >Find Out How We Empower Women.</p>
+        <a href="http://pslove.com" target="_blank" class="text-decoration-none text-muted" >
+          Find Out How We Empower Women.
+        </a>
+      </p>
       </div>
       </p>
-
-    <a href="{% url 'userflow:report' %}" type="submit" class="btn  btn-lg btn-outline btn-outline-light btn-block">
-      Get Report
+    <hr>
+    <h4>Are you worried about your period cycles? Download your period information and approach your nearest doctor for advice.</h4>
+    <a href="{% url 'userflow:report' %}" type="submit" class="btn btn-lg btn-outline btn-outline-light btn-block">
+      Download Report
     </a>
 
 </div>
